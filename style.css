@@ -1,0 +1,153 @@
+
+* {margin: 0; padding: 0;}
+
+/*///////////////////////////////////*/
+/*taille du slide responsive*/
+#slider {
+	position: relative;
+	padding-top: 40%;
+	overflow: hidden;
+}
+/*le wrapper qui fait dex fois l'ecran en taille et contiens les
+images en multiple background*/
+#slider #wrapper {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 200%;
+	height: 100%;
+	background-image: url(./images/nadal.jpg), url(./images/sieges.jpg);
+	background-size: 50%, 50%;
+	background-repeat: no-repeat, no-repeat;
+	background-position: 0% 0%, 100% 0%;
+	z-index: 0;
+	transition: all 0.4s;
+}
+
+/*////////////////////////////////////*/
+/*les textes de description*/
+/*la police, les ombres et la couleur*/
+#slider h1, p, a {
+	color: white;
+	text-shadow: 2px 2px 2px black;
+	font-weight: lighter;
+	text-decoration: none;
+	outline: none;
+}
+#slider h1, a {
+	font-family: "Francois One";
+}
+#slider p {
+	font-family: "Open Sans";
+}
+/*la position des deux textes du slide*/
+#slider #wrapper > div {
+	position: absolute;
+	text-align: center;
+	width: 24%;
+}
+#slider #titre1 {
+	top: 30%;
+	left: 5%;
+}
+#slider #titre2 {
+	top: 30%;
+	left: 55%;
+}
+/*le grand titre, tout en majuscule*/
+#slider #wrapper h1 {
+	position: relative;
+	font-size: 3vw;
+	text-transform: uppercase;
+	margin-bottom: 8%;
+}
+/*la ligne sous le titre*/
+#slider #wrapper h1:after {
+	content: "";
+	position: absolute;
+	bottom: -40%;
+	left: 30%;
+	width: 40%;
+	height: 1px;
+	background-color: white;
+}
+/*le texte sous le titre*/
+#slider #wrapper p {
+	font-size: 1.5vw;
+	margin-bottom: 5%;
+}
+/*le bouton "voir plus"*/
+#slider a {
+	font-size: 1.5vw;
+	text-transform: uppercase;
+	border: 1px solid white;
+	border-radius: 5%;
+	padding: 2% 5%;
+	transition: background-color 0.5s;
+}
+/*pour changer l'apparence du bouton voir plus
+quand on passe au dessus de toute la div*/
+#slider #wrapper > div:hover a {
+	background-color: rgba(200, 200, 200, 0.3);
+}
+
+
+/*//////////////////////////////////////*/
+/*les fleches*/
+/*on cache les input*/
+#slider input {
+	display: none;
+}
+/*la fleche pour aller a gauche*/
+#slider label#left {
+	position: absolute;
+	border-left: 3px solid rgba(200, 200, 200, 0.8);
+	border-bottom: 3px solid rgba(200, 200, 200, 0.8);
+	height: 5%;
+	width: 2%;
+	left: 40px;
+	top: 45%;
+	transform: rotate(45deg);
+	background-color: transparent;
+	cursor: pointer;
+	z-index: 1;
+}
+/*cliquer sur la fleche de droite deplace le slide*/
+#slider input#right:checked ~ #wrapper {
+	left: -100%;
+}
+/*la fleche pour aller a droite*/
+#slider label#right {
+	position: absolute;
+	border-right: 3px solid rgba(200, 200, 200, 0.8);
+	border-top: 3px solid rgba(200, 200, 200, 0.8);
+	height: 5%;
+	width: 2%;
+	right: 40px;
+	top: 45%;
+	transform: rotate(45deg);
+	background-color: transparent;
+	cursor: pointer;
+	z-index: 1;
+}
+/*les petits points du slide*/
+#slider span {
+	position: absolute;
+	bottom: 10%;
+	height: 13px;
+	width: 13px;
+	border-radius: 50%;
+	background-color: rgba(200, 200, 200, 0.6);
+	z-index: 1;
+}
+/*la position des deux*/
+#slider #left + span {
+	left: 48.5%;
+}
+#slider #right + span {
+	right: 48.5%;
+}
+/*la couleur pour celui du slide visible*/
+#slider input:checked + label + span {
+	background-color: rgb(200, 200, 200);
+}
