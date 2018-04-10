@@ -5,33 +5,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css?family=Francois+One|Open+Sans" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Francois+One|Open+Sans" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
     <title>Rolland</title>
 </head>
 <body>
     <!-- SIMON-->
     <header>
+      <div class="titre">
+        <img src="https://fft-rg-site.cdn.prismic.io/fft-rg-site%2F95765448-c7fa-428b-b565-8368dba90b17_logo.svg" alt="">
+        <h1>Roland Garros</h1>
+      </div>
+      <div class="articles">
+        <p>LE TOURNOI</p>
+        <p>UNIVERS RG</p>
+        <p>BILLETTERIE</p>
+        <p>BOUTIQUE</p>
+      </div>
+      <div class="logo">
+        <img src="bnp.png" alt="" width="100" height="50">
+        <div class="compte">
+          <div id="date"></div>
+          <script type="text/javascript" src="jkiki.js"></script>
+        </div>
+        <div class="fr">
+          <h4>FR</h4>
+        </div>
+      </div>
 
     </header>
 
     <!-- HUGO-->
     <div id="slider">
 			<input type="radio" name="arrow" id="left" checked>
-			<label for="left" id="left"></label>
-			<span></span>
+			<label for="left" id="dotLeft" class="dot"></label>
+			<label for="left" id="arrowLeft" tabindex="0"></label>
+			<label for="left" id="arrowFalseRight" tabindex="0"></label>
 			<input type="radio" name="arrow" id="right">
-			<label for="right" id="right"></label>
-			<span></span>
+			<label for="right" id="dotRight" class="dot"></label>
+			<label for="right" id="arrowRight" tabindex="0"></label>
+			<label for="right" id="arrowFalseLeft" tabindex="0"></label>
 			<div id="wrapper">
 				<div id="titre1">
+					<h1>roland-garros revêt ses plus beaux atours</h1>
+					<p>Le stade se prépare à vous accueillir.</p>
+					<a href="#">voir plus</a>
+				</div>
+				<div id="titre2">
 					<h1>rafael nadal retouche terre</h1>
 					<p>Sa quête d'un 11e Roland-Garros est lancée.</p>
 					<a href="#">voir plus</a>
 				</div>
-				<div id="titre2">
+				<div id="titre3">
 					<h1>roland-garros revêt ses plus beaux atours</h1>
 					<p>Le stade se prépare à vous accueillir.</p>
+					<a href="#">voir plus</a>
+				</div>
+				<div id="titre4">
+					<h1>rafael nadal retouche terre</h1>
+					<p>Sa quête d'un 11e Roland-Garros est lancée.</p>
 					<a href="#">voir plus</a>
 				</div>
 			</div>
@@ -42,10 +74,97 @@
     <div id="une"></div>
 
     <!-- SIBYLLE-->
-    <div id="art"></div>
+    <div id="art">
+
+        <div class="culture">
+
+            <div class="culture-titre"><h3>ART & CULTURE</h3></div>
+            <div class="culture-content">
+                <div class="culture-texte">
+                  <p class="p1">"REGARDS CROISES: JEROME BRYON"</p>
+                  <p class="p2">
+                    D'après le livre officiel de Roland-Garros,
+                    par Céline Clanet et
+                    Jérôme Bryon</p>
+                    <span class="voir-plus">voir-plus</span>
+
+                  </div>
+                  <i class="fas fa-image"></i>
+                </div>
+
+            </div>
+
+
+
+        <div class="insta">
+            <div class="insta-titre">
+              <h3>INSTAGRAM</h3>
+              <div class="after"></div>
+            </div>
+            <div class="insta-grid">
+              <div class="post">
+                  <div class="like">
+                    <i class="fab fa-instagram"></i>
+                    <p> 17454 likes</p>
+                  </div>
+                  <div class="insta-post back1">
+
+                  </div>
+              </div>
+              <div class="post">
+                <div class="like">
+                  <i class="fab fa-instagram"></i>
+                  <p> 16565 likes</p>
+                </div>
+                <div class="insta-post back2">
+
+                </div>
+              </div>
+              <div class="post">
+                <div class="like">
+                  <i class="fab fa-instagram"></i>
+                  <p> 28554 likes</p>
+                </div>
+                <div class="insta-post back3">
+
+                </div>
+              </div>
+              <div class="post">
+                <div class="like">
+                  <i class="fab fa-instagram"></i>
+                  <p> 21454 likes</p>
+                </div>
+                <div class="insta-post back4">
+
+                </div>
+              </div>
+
+            </div>
+            <div class="reseau">
+              <h3>Réseaux Sociaux</h3>
+              <div class="logo-reseaux">
+                <i class="fab fa-instagram logo"></i>
+                <i class="fab fa-facebook-f logo"></i>
+                <i class="fab fa-youtube logo"></i>
+                <i class="fab fa-twitter logo"></i>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+    </div>
 
     <!-- ALI-->
-    <div id="legendes"></div>
+    <div id="legendes">
+      <h2>LEGENDE</h2><hr/>
+      <video src="sport.mp4" width="700px" height="400px" controls></video>
+      <h1>"O Guga"</h1>
+      <p>De Kuerten à "Guga" : Roland-Garros 1997, naissance d'un
+			<br> champion.</p>
+    </div>
 
     <!-- JENNA-->
     <footer></footer>
